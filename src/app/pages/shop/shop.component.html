@@ -1,0 +1,29 @@
+
+
+
+<div class="container" id="product-cards">
+    <h1 class="text-center">PRODUCTS</h1>
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-md-3 py-3 py-md-0" *ngFor="let pd of productData">
+        <div class="card" >
+          <img src={{pd.articleImg}} alt="">
+          <div class="card-body">
+            <h3 class="text-center">{{pd.articleName}}</h3>
+            <p class="text-center"> {{pd. productDetails}}  </p>
+            <h3 class="text-center">{{pd.articlePrice}}  da</h3>
+            <div class="star text-center">
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+              <i class="fa-solid fa-star checked"></i>
+            </div>
+            <h2 class="text-center">  <a class="btn btn-outline-dark mt-auto" [routerLink]="['/shop',pd.id]">Buy Now</a>
+</h2>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+
